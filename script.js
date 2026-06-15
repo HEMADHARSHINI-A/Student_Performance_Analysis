@@ -1,60 +1,204 @@
-new Chart(document.getElementById("ethnicityChart"),{
+// Gender Distribution
 
-type:"bar",
+new Chart(document.getElementById("genderChart"), {
 
-data:{
-labels:["A","B","C","D","E"],
-datasets:[{
-label:"Average Score",
-data:[62,64,61,60,59]
-}]
-}
+    type: "doughnut",
 
-});
+    data: {
+        labels: ["Male", "Female"],
+        datasets: [{
+            data: [48, 52],
 
-new Chart(document.getElementById("genderChart"),{
+            backgroundColor: [
+                "#7b2cbf",
+                "#ff4d9d"
+            ],
 
-type:"doughnut",
+            borderWidth: 0
+        }]
+    },
 
-data:{
-labels:["Male","Female"],
-datasets:[{
-data:[50,50]
-}]
-}
-
-});
-
-new Chart(document.getElementById("educationChart"),{
-
-type:"bar",
-
-data:{
-labels:["High School","Bachelor","Master"],
-datasets:[{
-label:"Score",
-data:[58,64,70]
-}]
-}
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                labels: {
+                    color: "white"
+                }
+            }
+        }
+    }
 
 });
 
-new Chart(document.getElementById("prepChart"),{
 
-type:"pie",
+// Subject Performance
 
-data:{
-labels:["Completed","Not Completed"],
-datasets:[{
-data:[55,45]
-}]
-}
+new Chart(document.getElementById("subjectChart"), {
+
+    type: "bar",
+
+    data: {
+        labels: ["Math", "Reading", "Writing"],
+
+        datasets: [{
+            label: "Average Score",
+
+            data: [78, 82, 80],
+
+            backgroundColor: [
+                "#7b2cbf",
+                "#c77dff",
+                "#ff4d9d"
+            ]
+        }]
+    },
+
+    options: {
+        scales: {
+            y: {
+                ticks: {
+                    color: "white"
+                },
+                grid: {
+                    color: "#1f4e79"
+                }
+            },
+            x: {
+                ticks: {
+                    color: "white"
+                },
+                grid: {
+                    color: "#1f4e79"
+                }
+            }
+        },
+
+        plugins: {
+            legend: {
+                labels: {
+                    color: "white"
+                }
+            }
+        }
+    }
 
 });
-backgroundColor:[
-"#7b2cbf",
-"#9d4edd",
-"#c77dff",
-"#ff4d9d",
-"#ff85c1"
-]
+
+
+// Attendance Trend
+
+new Chart(document.getElementById("attendanceChart"), {
+
+    type: "line",
+
+    data: {
+        labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun"
+        ],
+
+        datasets: [{
+            label: "Attendance %",
+
+            data: [
+                75,
+                80,
+                78,
+                85,
+                88,
+                90
+            ],
+
+            borderColor: "#00abf0",
+
+            backgroundColor: "#00abf0",
+
+            tension: 0.4,
+
+            fill: false
+        }]
+    },
+
+    options: {
+        scales: {
+            y: {
+                ticks: {
+                    color: "white"
+                },
+                grid: {
+                    color: "#1f4e79"
+                }
+            },
+            x: {
+                ticks: {
+                    color: "white"
+                },
+                grid: {
+                    color: "#1f4e79"
+                }
+            }
+        },
+
+        plugins: {
+            legend: {
+                labels: {
+                    color: "white"
+                }
+            }
+        }
+    }
+
+});
+
+
+// Parent Education
+
+new Chart(document.getElementById("educationChart"), {
+
+    type: "pie",
+
+    data: {
+
+        labels: [
+            "High School",
+            "Bachelor",
+            "Master",
+            "PhD"
+        ],
+
+        datasets: [{
+
+            data: [
+                35,
+                30,
+                20,
+                15
+            ],
+
+            backgroundColor: [
+                "#7b2cbf",
+                "#9d4edd",
+                "#ff4d9d",
+                "#00abf0"
+            ]
+        }]
+    },
+
+    options: {
+
+        plugins: {
+            legend: {
+                labels: {
+                    color: "white"
+                }
+            }
+        }
+
+    }
+
+});
