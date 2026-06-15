@@ -1,116 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Performance Dashboard</title>
+    <title>Student Performance Dashboard</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
-<div class="container">
+<div class="dashboard">
 
-<h1>🎓 Student Performance Analysis Dashboard</h1>
+    <div class="header">
+        <h1>🎓 Student Performance Dashboard</h1>
+    </div>
 
-<div class="cards">
+    <div class="filters">
+        <select>
+            <option>All Classes</option>
+        </select>
 
-<div class="card">
-<h2>100</h2>
-<p>Students</p>
+        <select>
+            <option>All Subjects</option>
+        </select>
+
+        <select>
+            <option>All Gender</option>
+        </select>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>1000</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="card">
+            <h2>78%</h2>
+            <p>Average Score</p>
+        </div>
+
+        <div class="card">
+            <h2>85%</h2>
+            <p>Attendance</p>
+        </div>
+
+        <div class="card">
+            <h2>3.8</h2>
+            <p>Average GPA</p>
+        </div>
+
+    </div>
+
+    <div class="chart-grid">
+
+        <div class="chart-box">
+            <h3>Gender Distribution</h3>
+            <canvas id="genderChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Subject Performance</h3>
+            <canvas id="subjectChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Attendance Trend</h3>
+            <canvas id="attendanceChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Parent Education</h3>
+            <canvas id="educationChart"></canvas>
+        </div>
+
+    </div>
+
+    <div class="table-section">
+
+        <h2>Top Students</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Math</th>
+                    <th>Reading</th>
+                    <th>Writing</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Emma</td>
+                    <td>98</td>
+                    <td>97</td>
+                    <td>99</td>
+                </tr>
+
+                <tr>
+                    <td>John</td>
+                    <td>95</td>
+                    <td>96</td>
+                    <td>94</td>
+                </tr>
+
+                <tr>
+                    <td>Sophia</td>
+                    <td>94</td>
+                    <td>95</td>
+                    <td>96</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
 </div>
 
-<div class="card">
-<h2>62.51</h2>
-<p>Avg Math Score</p>
-</div>
-
-<div class="card">
-<h2>60.53</h2>
-<p>Avg Writing Score</p>
-</div>
-
-<div class="card">
-<h2>60.49</h2>
-<p>Avg Reading Score</p>
-</div>
-
-</div>
-
-<div class="charts">
-
-<div class="chart-box">
-<canvas id="ethnicityChart"></canvas>
-</div>
-
-<div class="chart-box">
-<canvas id="genderChart"></canvas>
-</div>
-
-</div>
-
-<div class="charts">
-
-<div class="chart-box">
-<canvas id="educationChart"></canvas>
-</div>
-
-<div class="chart-box">
-<canvas id="prepChart"></canvas>
-</div>
-
-</div>
-
-<div class="table-box">
-
-<h2>Top Students</h2>
-
-<table>
-
-<thead>
-<tr>
-<th>Name</th>
-<th>Math</th>
-<th>Reading</th>
-<th>Writing</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>Student 1</td>
-<td>95</td>
-<td>98</td>
-<td>97</td>
-</tr>
-
-<tr>
-<td>Student 2</td>
-<td>93</td>
-<td>95</td>
-<td>96</td>
-</tr>
-
-<tr>
-<td>Student 3</td>
-<td>92</td>
-<td>94</td>
-<td>95</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
+<!-- IMPORTANT -->
 <script src="script.js"></script>
 
 </body>
